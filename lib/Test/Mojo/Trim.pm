@@ -4,7 +4,7 @@ use strict;
 
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util 'squish';
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub trimmed_content_is {
     my $self = shift;
@@ -14,7 +14,7 @@ sub trimmed_content_is {
     my $got = squish($self->tx->res->dom->to_string);
     $value =~ s{> <}{><}g;
     $got =~ s{> <}{><}g;
-    $desc ||= 'exact match for content';
+    $desc ||= 'exact match for trimmed content';
 
     return $self->_test('is', $got, $value, $desc);
 }

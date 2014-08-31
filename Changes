@@ -1,5 +1,8 @@
 Revision history for Test-Mojo-Trim
 
+0.03  2014-08-31 18:06:32 CEST
+    - Improved test message
+
 0.02  2014-08-31 11:23:53 CEST
     - Added missing dependency
 

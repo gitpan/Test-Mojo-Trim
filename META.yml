@@ -22,9 +22,10 @@ no_index:
     - eg
     - examples
 requires:
-  perl: '5.008005'
+  Mojolicious: '5.00'
+  perl: '5.010010'
 resources:
   bugtracker: https://github.com/Csson/p5-test-mojo-trimmed/issues
   homepage: https://github.com/Csson/p5-test-mojo-trimmed
   repository: https://github.com/Csson/p5-test-mojo-trimmed.git
-version: '0.01'
+version: '0.02'

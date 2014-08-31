@@ -36,7 +36,8 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "Mojolicious" : "5.00",
+            "perl" : "5.010010"
          }
       },
       "test" : {
@@ -57,6 +58,6 @@
          "web" : "https://github.com/Csson/p5-test-mojo-trimmed"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
 

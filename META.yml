@@ -1,0 +1,30 @@
+---
+abstract: 'Test::Mojo expanded'
+author:
+  - 'Erik Carlsson <info@code301.com>'
+build_requires:
+  Test::More: '0.96'
+configure_requires:
+  Module::Build::Tiny: '0.036'
+dynamic_config: 0
+generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.140640'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Test-Mojo-Trim
+no_index:
+  directory:
+    - t
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+requires:
+  perl: '5.008005'
+resources:
+  bugtracker: https://github.com/Csson/p5-test-mojo-trimmed/issues
+  homepage: https://github.com/Csson/p5-test-mojo-trimmed
+  repository: https://github.com/Csson/p5-test-mojo-trimmed.git
+version: '0.01'

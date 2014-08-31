@@ -1,0 +1,56 @@
+NAME
+    Test::Mojo::Trim - Test::Mojo expanded
+
+SYNOPSIS
+        use Mojo::Base -strict;
+        use Mojolicious::Lite;
+        use Test::More;
+        use Test::Mojo::Trim;
+
+        my $test = Test::Mojo::Trim->new;
+
+        get '/test_1';
+
+        my $compared_to = qq{ <div><h1>Header</h1><p>A paragraph.</p></div> };
+
+        $test->get_ok('/test_1')->status_is(200)->trimmed_content_is($compared_to);
+    
+        done_testing();
+
+        __DATA__
+        @@ the_test.html.ep
+        <div>
+            <h1>Header</h1>
+            <p>A paragraph.</p>
+        </div>
+
+DESCRIPTION
+    Test::Mojo::Trim is an extension to Test::Mojo, that adds an additional
+    string comparison function.
+
+METHODS
+    Test::Mojo::Trim inherits all methods from Test::Mojo and implements the
+    following new one.
+
+  trimmed_content_is
+        $test->get_ok('/test')->trimmed_content_is('<html></html>');
+
+    Removes all whitespace between tags from the two strings that are
+    compared. That is, if a > and < is separated only by whitespace, that
+    whitespace is removed.
+
+AUTHOR
+    Erik Carlsson <info@code301.com>
+
+COPYRIGHT
+    Copyright 2014- Erik Carlsson
+
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+    *   Test::Mojo
+
+    *   Test::Mojo::Most
+

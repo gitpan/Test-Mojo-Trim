@@ -1,5 +1,9 @@
 Revision history for Test-Mojo-Trim
 
+0.05  2014-09-04 20:44:07 CEST
+    - Fixed a cosmetic problem related to last release where it would think that a
+      request error had occured
+
 0.04  2014-09-04 16:44:56 CEST
     - If the request fails it dumps the Mojolicious error page, which is hard ro read.
       This release extracts the specific action and adds it to the test description.

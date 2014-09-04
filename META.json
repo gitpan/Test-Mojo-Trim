@@ -4,7 +4,7 @@
       "Erik Carlsson <info@code301.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v1.0.5, Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -26,7 +26,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.036"
+            "Module::Build::Tiny" : "0.037"
          }
       },
       "develop" : {
@@ -49,15 +49,15 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/Csson/p5-test-mojo-trimmed/issues"
+         "web" : "https://github.com/Csson/p5-test-mojo-trim/issues"
       },
-      "homepage" : "https://github.com/Csson/p5-test-mojo-trimmed",
+      "homepage" : "https://github.com/Csson/p5-test-mojo-trim",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/Csson/p5-test-mojo-trimmed.git",
-         "web" : "https://github.com/Csson/p5-test-mojo-trimmed"
+         "url" : "https://github.com/Csson/p5-test-mojo-trim.git",
+         "web" : "https://github.com/Csson/p5-test-mojo-trim"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 

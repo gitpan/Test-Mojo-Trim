@@ -14,7 +14,7 @@ SYNOPSIS
         my $compared_to = qq{ <div><h1>Header</h1><p>A paragraph.</p></div> };
 
         $test->get_ok('/test_1')->status_is(200)->trimmed_content_is($compared_to);
-    
+
         done_testing();
 
         __DATA__

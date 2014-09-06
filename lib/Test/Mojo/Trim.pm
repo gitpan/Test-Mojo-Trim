@@ -4,7 +4,7 @@ use strict;
 
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util 'squish';
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub trimmed_content_is {
     my $self = shift;
@@ -32,8 +32,10 @@ __END__
 
 Test::Mojo::Trim - Test::Mojo expanded
 
+=for html <p><a style="float: left;" href="https://travis-ci.org/Csson/p5-test-mojo-trim"><img src="https://travis-ci.org/Csson/p5-test-mojo-trim.svg?branch=master">&nbsp;</a>
+
 =head1 SYNOPSIS
-    
+
     use Mojo::Base -strict;
     use Mojolicious::Lite;
     use Test::More;
@@ -46,7 +48,7 @@ Test::Mojo::Trim - Test::Mojo expanded
     my $compared_to = qq{ <div><h1>Header</h1><p>A paragraph.</p></div> };
 
     $test->get_ok('/test_1')->status_is(200)->trimmed_content_is($compared_to);
-    
+
     done_testing();
 
     __DATA__
@@ -68,7 +70,7 @@ L<Test::Mojo::Trim> inherits all methods from L<Test::Mojo> and implements the f
 
     $test->get_ok('/test')->trimmed_content_is('<html></html>');
 
-Removes all whitespace between tags from the two strings that are compared. 
+Removes all whitespace between tags from the two strings that are compared.
 That is, if a E<gt> and E<lt> is separated only by whitespace, that whitespace is removed.
 
 =head1 AUTHOR

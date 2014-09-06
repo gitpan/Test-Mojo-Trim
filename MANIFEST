@@ -10,4 +10,5 @@ cpanfile
 dist.ini
 lib/Test/Mojo/Trim.pm
 t/01-load.t
+t/author-test-eol.t
 t/release-pod-syntax.t

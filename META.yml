@@ -23,9 +23,9 @@ no_index:
     - examples
 requires:
   Mojolicious: '5.00'
-  perl: '5.010010'
+  perl: '5.010'
 resources:
   bugtracker: https://github.com/Csson/p5-test-mojo-trim/issues
   homepage: https://github.com/Csson/p5-test-mojo-trim
   repository: https://github.com/Csson/p5-test-mojo-trim.git
-version: '0.05'
+version: '0.06'

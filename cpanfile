@@ -1,4 +1,4 @@
-requires 'perl', '5.010010';
+requires 'perl', '5.010';
 
 requires 'Mojolicious', '5.00';
 

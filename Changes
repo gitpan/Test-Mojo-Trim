@@ -1,5 +1,8 @@
 Revision history for Test-Mojo-Trim
 
+0.06  2014-09-06 07:29:03 CEST
+    - Fixed faulty Perl version requirement
+
 0.05  2014-09-04 20:44:07 CEST
     - Fixed a cosmetic problem related to last release where it would think that a
       request error had occured

@@ -4,21 +4,32 @@ use strict;
 
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util 'squish';
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub trimmed_content_is {
     my $self = shift;
     my $value = squish(Mojo::DOM->new(shift)->to_string);
     my $desc = shift;
 
-    my $got = squish($self->tx->res->dom->to_string);
-    my $error = defined $self->tx->res->dom->find('#error') ? $self->tx->res->dom->find('#error')->text : undef;
+    my $dom = $self->tx->res->dom;
+    my $got = squish($dom->to_string);
+    my $error = defined $dom->find('#error') ? $dom->find('#error')->text : undef;
     chomp $error;
 
     $value =~ s{> <}{><}g;
     $got =~ s{> <}{><}g;
     $desc ||= 'exact match for trimmed content';
-    $desc .= (defined $error && length $error ? " (Error: $error)" : '');
+
+    if(defined $error && length $error) {
+        $desc .= (defined $error && length $error ? " (Error: $error)" : '');
+        my $table = $dom->find('#context table');
+        if($table) {
+            $table->find('tr')->each(sub {
+                $desc .= $_->all_text . "\n";
+            });
+            $got = '<see error>';
+        }
+    }
 
     return $self->_test('is', $got, $value, $desc);
 }

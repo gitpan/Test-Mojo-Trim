@@ -4,7 +4,7 @@ use strict;
 
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util 'squish';
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 sub trimmed_content_is {
     my $self = shift;
@@ -13,8 +13,8 @@ sub trimmed_content_is {
 
     my $dom = $self->tx->res->dom;
     my $got = squish($dom->to_string);
-    my $error = defined $dom->find('#error') ? $dom->find('#error')->text : undef;
-    chomp $error;
+    my $error = defined $dom->at('#error') ? $dom->at('#error')->text : undef;
+    chomp $error if $error;
 
     $value =~ s{> <}{><}g;
     $got =~ s{> <}{><}g;

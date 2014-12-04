@@ -32,7 +32,7 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.037"
+            "Module::Build::Tiny" : "0.039"
          }
       },
       "develop" : {
@@ -64,7 +64,7 @@
          "web" : "https://github.com/Csson/p5-test-mojo-trim"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_contributors" : [
       "Erik Carlsson <info@code301.com>"
    ]

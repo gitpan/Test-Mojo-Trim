@@ -1,5 +1,8 @@
 Revision history for Test-Mojo-Trim
 
+0.09  2014-12-04 15:30:57 CET
+    - Better use of Mojo::DOM api.
+
 0.08  2014-09-18 21:19:44 CEST
     - In case of request failer (ie status 500) the result is parsed and
       output in a more readable style.
